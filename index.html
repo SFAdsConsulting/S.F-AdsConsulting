@@ -206,7 +206,7 @@
             text-align: center;
             padding-top: 235px; /* Increased padding-top for more space at the top */
             padding-bottom: 50px; /* Kept padding-bottom as requested */
-            min-height: 850px; /* Increased min-height to give more room for positioning */
+            min-height: 750px; /* Adjusted min-height to accommodate new padding */
             display: flex; /* Flexbox für Positionierung des Inhaltsblocks */
             align-items: center; /* Vertikal zentriert den Inhaltsblock */
             justify-content: center;
@@ -219,17 +219,18 @@
             border-image-width: 0 0 5px 0;
             border-style: solid;
             margin-top: -60px;
-
-            /* NEW: Background image properties */
-            background-image: url('./Headshot3.jpg');
-            background-size: cover; /* Ensures the image covers the entire container */
-            background-position: right bottom; /* Positions the image to the bottom right */
-            background-repeat: no-repeat; /* Prevents the image from repeating */
         }
 
-        /* Styling für das Hintergrundbild (jetzt ein img-Tag) - REMOVED */
+        /* Styling für das Hintergrundbild (jetzt ein img-Tag) */
         .hero-background-image {
-            display: none; /* Hide the img tag as background is now handled by CSS */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Skaliert das Bild, um den Bereich abzudecken */
+            object-position: right center; /* Bild horizontal auf den rechten Rand und vertikal zentriert positionieren */
+            z-index: 1; /* Unter dem Overlay und Text */
         }
 
         /* Styling für das Overlay */
@@ -836,21 +837,22 @@
                     <li><a href="#prozess">Ablauf</a></li>
                     <li><a href="#preise">Preise</a></li>
                     <li><a href="#faq">FAQ</a></li>
-                    <li><a href="https://calendly.com/YOUR_CALENDLY_USERNAME/YOUR_EVENT_TYPE" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/YOUR_CALENDLY_USERNAME/YOUR_EVENT_TYPE'});return false;">Termin buchen</a></li>
+                    <!-- Calendly Link im Navigationsmenü -->
+                    <li><a href="https://calendly.com/s-fadsconsulting/30min" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/s-fadsconsulting/30min'});return false;">Termin buchen</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <section class="hero">
-        <!-- Removed img tag as background is now handled by CSS -->
+        <img src="./Headshot3.jpg" alt="SF Consulting Berater" class="hero-background-image">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h1>Nachhaltige Strategien für Ihr Unternehmen</h1>
             <p>Gemeinsam maximale Sichtbarkeit und messbaren ROI erzielen. Nutzen Sie Ihr Google-Ads-Budget für nachhaltiges Wachstum</p>
             
             <!-- Calendly Pop-up Widget Integration (Platzhalter) -->
-            <a href="https://calendly.com/YOUR_CALENDLY_USERNAME/YOUR_EVENT_TYPE" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/YOUR_CALENDLY_USERNAME/YOUR_EVENT_TYPE'});return false;" class="cta-button">Kostenloses Erstgespräch buchen</a>
+            <a href="https://calendly.com/s-fadsconsulting/30min" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/s-fadsconsulting/30min'});return false;" class="cta-button">Kostenloses Erstgespräch buchen</a>
         </div>
     </section>
 
@@ -933,7 +935,7 @@
                     <p>Ihre Kampagnen werden laufend optimiert. Sie erhalten regelmäßige, transparente Echtzeit-Reportings und persönlichen Austausch.</p>
                 </div>
             </div>
-            <a href="https://calendly.com/YOUR_CALENDLY_USERNAME/YOUR_EVENT_TYPE" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/YOUR_CALENDLY_USERNAME/YOUR_EVENT_TYPE'});return false;" class="cta-button" style="margin-top: 60px;">Jetzt kostenloses Erstgespräch vereinbaren</a>
+            <a href="https://calendly.com/s-fadsconsulting/30min" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/s-fadsconsulting/30min'});return false;" class="cta-button" style="margin-top: 60px;">Jetzt kostenloses Erstgespräch vereinbaren</a>
         </div>
     </section>
 
