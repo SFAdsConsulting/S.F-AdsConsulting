@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.F Consulting | Ihr Partner für erfolgreiche Google Ads Strategien</title>
+    <meta name="description" content="SF Consulting bietet maßgeschneiderte Google Ads Beratung und Management für kleine bis mittlere Unternehmen. Erzielen Sie Top-Performance, maximale Sichtbarkeit und messbaren Erfolg mit uns.">
+    <meta name="keywords" content="Google Ads Consulting, Google Ads Beratung, SEA Consulting, Online Marketing, Performance Marketing, Google Ads Management, Google Search Ads, Google Display Ads, Google Shopping Ads, YouTube Ads, Performance Max, Account Audit, Strategieentwicklung, SF Consulting">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Updated Google Fonts import to include Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <!-- Corrected integrity attribute -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha384-e7vS0Xl0R5F8mR6z+J/a+0+6J+f/g+p+r+P+q+S+A+B+C+D+E+F+G+H+I+J+K+L+M+N+O+P+Q+R+S+T+U+V+W+X+Y+Z" crossorigin="anonymous">
+    <!-- Calendly Widget CSS - Moved to head for better loading -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) - Google Ads (Platzhalter, ersetzen mit echten IDs) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-YOUR_CONVERSION_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-YOUR_CONVERSION_ID'); // Platzhalter: Ersetzen Sie mit Ihrer Google Ads Conversion ID
+    </script>
+
+    <style>
+        /* Define your custom CSS variables for colors, shadows, etc. */
+        :root {
+            --primary-bg: #FFFFFF; /* Pure White background */
+            --secondary-bg: #E8F2FF; /* Very light blue for alternating sections */
+            --text-color: #212121; /* Darker text for more contrast */
+            --light-text-color: #616161; /* Lighter grey for secondary text */
+            --accent-main-blue: #007BFF; /* Primary blue accent */
+            --accent-dark-blue: #0056b3; /* Darker blue for contrast/gradient end */
+            --accent-light-blue: #A0C9FF; /* New: Lighter blue for logo gradient start */
+            /* Brand gradient for logo text - now from light blue to main blue */
+            --brand-gradient-start: var(--accent-light-blue); /* Start with light blue */
+            --brand-gradient-end: var(--accent-main-blue); /* End with the main blue accent */
+            --shadow-light: rgba(0, 0, 0, 0.08); /* Subtle shadow for lifted elements */
+            --shadow-medium: rgba(0, 0, 0, 0.15); /* Slightly more prominent shadow */
+        }
+
+        /* Basic box model reset and scroll behavior */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px; /* Default for desktop */
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--primary-bg);
+            overflow-x: hidden; /* Prevent horizontal scroll from overflow */
+            padding-top: 0; /* No padding-top on body, hero will adjust */
+        }
+
+        /* Reusable container for content width */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Header Styling --- */
+        .header {
+            background-color: var(--primary-bg);
+            padding: 15px 0;
+            border-bottom: 2px solid var(--secondary-bg);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+            /* Gradient border at the bottom of the header - now blue */
+            border-image: linear-gradient(90deg, var(--accent-main-blue), var(--accent-dark-blue)) 1;
+            border-image-slice: 1;
+            border-image-width: 0 0 3px 0;
+            border-style: solid;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .brand-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header h1 {
+            font-size: 2em; /* Adjusted font size for Lato logo */
+            font-family: 'Lato', sans-serif; /* Changed font to Lato */
+            margin-bottom: 0;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            /* Brand gradient for logo text - now from light blue to main blue */
+            background: linear-gradient(90deg, var(--brand-gradient-start), var(--brand-gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: initial;
+            display: inline-block;
+            background-size: 200% auto;
+            transition: background-position 0.5s ease-out;
+            cursor: pointer;
+        }
+
+        .header h1:hover {
+            background-position: -100% 0;
+        }
+
+        /* Removed YouTube icon from header for this business */
+        .header .youtube-icon-link {
+            display: none;
+        }
+
+        .header p {
+            font-size: 0.7em; /* Adjusted font size for balance with new logo */
+            color: var(--text-color);
+            margin-top: 3px;
+            margin-left: 0;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            white-space: normal;
+        }
+
+        /* Navigation styles */
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px; /* Adjusted gap between navigation items */
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 0.85em; /* Adjusted font size for navigation links */
+            padding: 5px 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 4px;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            /* Now blue gradient */
+            background: linear-gradient(90deg, var(--accent-main-blue), var(--accent-dark-blue));
+            transition: width 0.3s ease, height 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .main-nav a:hover {
+            color: var(--accent-main-blue); /* Text color change on hover to blue */
+        }
+        .main-nav a:hover::after {
+            width: 100%;
+            height: 4px;
+        }
+
+        /* Mobile menu toggle button */
+        .menu-toggle {
+            display: none; /* Hidden by default on desktop */
+            font-size: 1.8em;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            cursor: pointer;
+            z-index: 101;
+            padding: 5px;
+        }
+        
+        /* Hamburger icon styling - now blue */
+        .menu-toggle .fa-bars {
+            color: var(--accent-main-blue);
+        }
+        .menu-toggle .fa-times {
+            color: var(--accent-dark-blue);
+        }
+
+        /* --- Hero Section Styling --- */
+        .hero {
+            position: relative; /* Wichtig für absolute Positionierung der Kinder */
+            overflow: hidden; /* Verbirgt Teile des Bildes, die über den Container hinausgehen */
+            color: white;
+            text-align: center;
+            padding-top: 235px; /* Increased padding-top for more space at the top */
+            padding-bottom: 50px; /* Kept padding-bottom as requested */
+            min-height: 850px; /* Increased min-height to give more room for positioning */
+            display: flex; /* Flexbox für Positionierung des Inhaltsblocks */
+            align-items: center; /* Vertikal zentriert den Inhaltsblock */
+            justify-content: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-shadow: 0 4px 15px var(--shadow-medium);
+            /* Farbverlauf-Rahmen unten im Hero-Bereich */
+            border-image: linear-gradient(90deg, var(--accent-main-blue), var(--accent-dark-blue)) 1;
+            border-image-slice: 1;
+            border-image-width: 0 0 5px 0;
+            border-style: solid;
+            margin-top: -60px;
+
+            /* NEW: Background image properties */
+            background-image: url('./Headshot3.jpg');
+            background-size: cover; /* Ensures the image covers the entire container */
+            background-position: right bottom; /* Positions the image to the bottom right */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+        }
+
+        /* Styling für das Hintergrundbild (jetzt ein img-Tag) - REMOVED */
+        .hero-background-image {
+            display: none; /* Hide the img tag as background is now handled by CSS */
+        }
+
+        /* Styling für das Overlay */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.1); /* Leichtes Overlay für bessere Lesbarkeit des Textes */
+            z-index: 2; /* Zwischen Bild und Text */
+        }
+
+        /* Styling für den Hero-Inhalt (Text und Button) */
+        .hero-content {
+            position: relative; /* Damit der Inhalt über dem Overlay liegt */
+            z-index: 3; /* Über Bild und Overlay */
+            text-align: center;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0;
+        }
+
+        .hero h1 {
+            font-size: 3.2em; /* Reduced font size to ensure 3 lines max for the heading */
+            margin-bottom: 20px;
+            line-height: 1.1;
+            color: white;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 1.6em;
+            margin-bottom: 40px;
+            max-width: 1000px;
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- Call to Action Button Styling - now blue --- */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--accent-main-blue), var(--accent-dark-blue));
+            color: white;
+            padding: 18px 35px;
+            font-size: 1.3em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 15px var(--shadow-medium);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(90deg, var(--accent-dark-blue), var(--accent-main-blue)); /* Reverse gradient on hover */
+            transform: translateY(-4px); /* Lift effect */
+            box-shadow: 0 8px 20px var(--shadow-medium); /* Enhanced shadow on hover */
+        }
+
+        /* --- Reusable Section Styling --- */
+        .section {
+            padding: 100px 20px;
+            text-align: center; /* Ensure all sections default to centered text */
+            background-color: var(--primary-bg);
+            margin-bottom: 0;
+            box-shadow: none;
+            border-image: linear-gradient(90deg, var(--accent-main-blue), var(--accent-dark-blue)) 1;
+            border-image-slice: 1;
+            border-image-width: 0 0 5px 0;
+            border-style: solid;
+        }
+
+        .section:nth-of-type(even) {
+            background-color: var(--secondary-bg); /* Alternate background for sections - now light blue */
+        }
+
+        .section h2 {
+            font-size: 3em;
+            margin-bottom: 40px;
+            color: var(--text-color);
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 90px;
+            height: 5px;
+            /* Now blue gradient */
+            background: linear-gradient(90deg, var(--accent-main-blue), var(--accent-dark-blue));
+            border-radius: 3px;
+        }
+
+        .section p {
+            font-size: 1.15em;
+            max-width: 900px;
+            margin: 0 auto 25px auto;
+            color: var(--light-text-color);
+        }
+
+        /* Styles for the emoji in the problem boxes */
+        .box-emoji {
+            font-size: 2.5em; /* Make emoji larger */
+            margin-top: 15px; /* Space between text and emoji */
+            text-align: center; /* Center the emoji */
+        }
+
+        /* --- Pain Points / Solution List Styling --- */
+        .points-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+            align-items: stretch;
+        }
+
+        .point-item {
+            background-color: var(--primary-bg);
+            border-radius: 12px;
+            padding: 35px;
+            flex: 1 1 calc(25% - 30px);
+            min-width: 250px;
+            max-width: 300px;
+            box-shadow: 0 8px 25px var(--shadow-light);
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-image 0.3s ease;
+            border: 3px solid transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Adjusted to push emoji to bottom */
+        }
+
+        .point-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px var(--shadow-medium);
+            /* Gradient border on hover - now blue */
+            border-image: linear-gradient(90deg, var(--accent-main-blue), var(--accent-dark-blue)) 1;
+            border-image-slice: 1;
+        }
+
+        .point-item h3 {
+            color: var(--text-color);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .point-item.solution h3 {
+            color: var(--text-color);
+        }
+
+        .point-item p {
+            color: var(--light-text-color);
+            margin-bottom: 0;
+            flex-grow: 1; /* Allows paragraph to take up remaining space, pushing elements to bottom */
+        }
+
+        /* --- How It Works Section Styling --- */
+        .how-it-works-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .step-item {
+            background-color: var(--primary-bg);
+            border-radius: 12px;
+            padding: 45px;
+            flex: 1 1 calc(33% - 80px);
+            min-width: 300px;
+            box-shadow: 0 8px 25px var(--shadow-light);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-image 0.3s ease;
+            border: 3px solid transparent;
+        }
+
+        .step-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px var(--shadow-medium);
+            /* Gradient border on hover - now blue */
+            border-image: linear-gradient(90deg, var(--accent-main-blue), var(--accent-dark-blue)) 1;
+            border-image-slice: 1;
+        }
+
+        .step-item::before {
+            content: attr(data-step);
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 3.5em;
+            font-weight: 700;
+            color: rgba(0, 0, 0, 0.04);
+            z-index: 1;
+        }
+
+        .step-item h3 {
+            font-size: 2em;
+            color: var(--accent-main-blue); /* Header for step item now blue */
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+        .step-item p {
+            font-size: 1.05em;
+            color: var(--light-text-color);
+            position: relative;
+            z-index: 2;
+            margin-bottom: 0;
+        }
+
+        /* --- Pricing Section Specifics --- */
+        .pricing-content {
+            background-color: var(--primary-bg);
+            border-radius: 12px;
+            padding: 50px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 8px 25px var(--shadow-light);
+            text-align: center;
+        }
+
+        .pricing-content .price {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: var(--accent-main-blue); /* Price text now blue */
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .pricing-content .price span {
+            font-size: 0.6em;
+            color: var(--text-color);
+            align-self: flex-end;
+            margin-bottom: 10px;
+        }
+
+        .pricing-content .guarantee {
+            font-size: 1.2em;
+            color: var(--accent-dark-blue); /* Guarantee text now blue */
+            font-weight: 600;
+            margin-top: 25px;
+        }
+
+        /* --- FAQ Section Specifics (Accordion) --- */
+        .faq-item {
+            text-align: left;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--secondary-bg); /* Border now uses light blue/white */
+            padding-bottom: 15px;
+        }
+
+        .faq-item h3 {
+            font-size: 1.3em;
+            color: var(--text-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .faq-item h3::after {
+            content: '+';
+            font-size: 1.5em;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active h3::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-item p {
+            font-size: 1em;
+            color: var(--light-text-color);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+            padding-left: 20px;
+        }
+
+        .faq-item.active p {
+            max-height: 200px;
+            padding-top: 10px;
+        }
+
+        /* --- Video Section Styling (Removed for SF Consulting) --- */
+        .video-section {
+            display: none; /* Hide video section as no video is provided for the new business */
+        }
+
+        /* --- Footer Styling --- */
+        .footer {
+            background-color: var(--secondary-bg); /* Footer background now light blue */
+            color: var(--light-text-color);
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9em;
+            border-top: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0.75px;
+            /* Now blue gradient */
+            background: linear-gradient(90deg, var(--accent-main-blue), var(--accent-dark-blue));
+            z-index: 1;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            color: var(--light-text-color);
+        }
+
+        .footer a {
+            color: var(--accent-main-blue); /* Footer links now blue */
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Responsive Design Media Queries --- */
+        @media (max-width: 992px) {
+            html {
+                scroll-padding-top: 85px;
+            }
+            .header h1 {
+                font-size: 1.8em; /* Adjusted font size for tablet */
+            }
+            .header p {
+                font-size: 0.65em; /* Adjusted font size for tablet */
+            }
+            .main-nav ul {
+                gap: 15px; /* Adjusted gap for tablet */
+            }
+            .main-nav a {
+                font-size: 0.8em; /* Adjusted font size for tablet */
+            }
+            body {
+                padding-top: 85px;
+            }
+            .point-item {
+                flex: 1 1 calc(50% - 30px);
+                max-width: 450px;
+            }
+            .box-emoji {
+                font-size: 2em; /* Smaller emoji on tablet */
+            }
+        }
+
+        @media (max-width: 768px) {
+            html {
+                scroll-padding-top: 70px;
+            }
+            /* Header adjustments for smaller screens */
+            .header {
+                padding: 8px 0;
+            }
+            .header .container {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0;
+                padding: 0 15px;
+            }
+            .brand-info {
+                justify-content: flex-start;
+                flex-wrap: nowrap;
+                width: auto;
+            }
+            .header h1 {
+                font-size: 1.5em;
+            }
+            .header p {
+                font-size: 0.55em;
+                margin-top: 1px;
+                white-space: nowrap;
+            }
+            /* Show hamburger menu, hide regular nav */
+            .main-nav {
+                display: block;
+                position: relative;
+            }
+            .main-nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background-color: var(--primary-bg);
+                box-shadow: 0 8px 25px var(--shadow-medium);
+                border-radius: 0 0 8px 8px;
+                width: 200px;
+                padding: 10px 0;
+                border: 1px solid var(--secondary-bg);
+                border-top: none;
+                z-index: 99;
+                gap: 0;
+                text-align: right;
+            }
+            .main-nav ul.active {
+                display: flex;
+            }
+            .main-nav a {
+                padding: 10px 15px;
+                font-size: 1em;
+                width: 100%;
+                text-align: right;
+                border-bottom: 1px solid var(--secondary-bg);
+                box-sizing: border-box;
+            }
+            .main-nav li:last-child a {
+                border-bottom: none;
+            }
+            .main-nav a::after {
+                display: none;
+            }
+            .menu-toggle {
+                display: block;
+            }
+
+            body {
+                padding-top: 70px;
+            }
+            .hero {
+                padding-top: 120px;
+                padding-bottom: 70px;
+                min-height: 380px;
+                margin-top: -40px;
+            }
+            .hero h1 {
+                font-size: 2.2em;
+            }
+            .hero p {
+                font-size: 1.1em;
+                margin-bottom: 25px;
+            }
+            .cta-button {
+                padding: 13px 22px;
+                font-size: 1em;
+            }
+            .section h2 {
+                font-size: 2em;
+                margin-bottom: 25px;
+            }
+            .section h2::after {
+                width: 60px;
+            }
+            .section p {
+                font-size: 0.95em;
+            }
+            .point-item {
+                flex: 1 1 100%;
+                max-width: 100%;
+                padding: 20px;
+            }
+            .point-item h3 {
+                font-size: 1.2em;
+            }
+            .point-item p {
+                font-size: 0.9em;
+            }
+            .box-emoji {
+                font-size: 1.8em; /* Smaller emoji on mobile */
+            }
+            .how-it-works-steps {
+                flex-direction: column;
+                align-items: center;
+            }
+            .step-item {
+                flex: 1 1 100%;
+                max-width: 350px;
+                padding: 30px;
+            }
+            .step-item h3 {
+                font-size: 1.5em;
+            }
+            .step-item p {
+                font-size: 0.95em;
+            }
+            .pricing-content {
+                padding: 25px;
+            }
+            .pricing-content .price {
+                font-size: 2.8em;
+            }
+            .pricing-content .guarantee {
+                font-size: 1em;
+            }
+            .faq-item h3 {
+                font-size: 1.05em;
+            }
+            .faq-item p {
+                font-size: 0.85em;
+                padding-left: 8px;
+            }
+            .video-section {
+                display: none; /* Hide video section as no video is provided for the new business */
+            }
+        }
+
+        @media (max-width: 480px) {
+            html {
+                scroll-padding-top: 65px;
+            }
+            /* Even smaller adjustments for very small phones */
+            .header h1 {
+                font-size: 1.4em;
+            }
+            .header p {
+                font-size: 0.5em;
+                line-height: 1.2;
+            }
+            .main-nav ul {
+                width: 180px;
+            }
+            .main-nav a {
+                font-size: 0.9em;
+            }
+            body {
+                padding-top: 65px;
+            }
+            .hero {
+                padding-top: 80px;
+                padding-bottom: 50px;
+                min-height: 300px;
+                margin-top: -30px;
+            }
+            .hero h1 {
+                font-size: 1.8em;
+            }
+            .hero p {
+                font-size: 0.9em;
+            }
+            .cta-button {
+                padding: 10px 18px;
+                font-size: 0.9em;
+            }
+            .section h2 {
+                font-size: 1.6em;
+            }
+            .section p {
+                font-size: 0.85em;
+            }
+            .point-item {
+                padding: 15px;
+            }
+            .step-item {
+                padding: 25px;
+            }
+            .pricing-content {
+                padding: 20px;
+            }
+            .pricing-content .price {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="brand-info">
+                <!-- YouTube icon removed, as it's not relevant for this business -->
+                <h1>S.F Consulting</h1>
+                <p>Ihr vertrauensvoller Partner für Google-Ads</p>
+            </div>
+            <!-- Hamburger menu toggle button -->
+            <button class="menu-toggle" aria-label="Navigation umschalten">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#herausforderungen">Herausforderungen</a></li>
+                    <li><a href="#unsere-lösung">Lösungen</a></li>
+                    <li><a href="#prozess">Ablauf</a></li>
+                    <li><a href="#preise">Preise</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="https://calendly.com/YOUR_CALENDLY_USERNAME/YOUR_EVENT_TYPE" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/YOUR_CALENDLY_USERNAME/YOUR_EVENT_TYPE'});return false;">Termin buchen</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <!-- Removed img tag as background is now handled by CSS -->
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Nachhaltige Strategien für Ihr Unternehmen</h1>
+            <p>Gemeinsam maximale Sichtbarkeit und messbaren ROI erzielen. Nutzen Sie Ihr Google-Ads-Budget für nachhaltiges Wachstum</p>
+            
+            <!-- Calendly Pop-up Widget Integration (Platzhalter) -->
+            <a href="https://calendly.com/YOUR_CALENDLY_USERNAME/YOUR_EVENT_TYPE" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/YOUR_CALENDLY_USERNAME/YOUR_EVENT_TYPE'});return false;" class="cta-button">Kostenloses Erstgespräch buchen</a>
+        </div>
+    </section>
+
+    <section class="section" id="herausforderungen">
+        <div class="container">
+            <h2>Stehen Sie vor diesen Google Ads Herausforderungen?</h2>
+            <p>Ihre Kampagnen kosten zu viel und bringen zu wenig Umsatz oder zu wenig Leads? Wir optimieren ihre Kampagnen für maximale Rentabilität</p>
+            <div class="points-list">
+                <div class="point-item">
+                    <h3>Geringer ROI / Hohe Kosten</h3>
+                    <p>Ihre Kampagnen kosten zu viel und bringen zu wenig Umsatz oder zu wenig Leads? Wir optimieren ihre Kampagnen für maximale Rentabilität</p>
+                    <div class="box-emoji">📉</div>
+                </div>
+                <div class="point-item">
+                    <h3>Fehlende Transparenz</h3>
+                    <p>Sie wissen nicht genau, wohin Ihr Budget fließt und welche Ergebnisse erzielt werden? Wir schaffen Klarheit durch transparente Reportings.</p>
+                    <div class="box-emoji">👻</div>
+                </div>
+                <div class="point-item">
+                    <h3>Komplexe Account-Struktur</h3>
+                    <p>Ihr Google Ads Konto ist unübersichtlich? Dies kann schnell zu einem hohen Budgetverlust führen. Wir sorgen für eine saubere, performante Konto-Struktur nach Best Practice</p>
+                    <div class="box-emoji">🧩</div>
+                </div>
+                <div class="point-item">
+                    <h3>Nicht genug Leads/Sales</h3>
+                    <p>Ihre Kampagnen generieren nicht genug qualifizierte Anfragen oder Verkäufe? Wir entwickeln Strategien, die performen.</p>
+                    <div class="box-emoji">🎯</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="unsere-lösung">
+        <div class="container">
+            <h2>Lösung: Vertrauen, jahrelange Expertise, messbare Ergebnisse & Innovation</h2>
+            <p>Sie erhalten nicht nur einen Dienstleister, sondern einen erfahrenen Partner, der sich Ihren Erfolg zur Mission macht. Wir bauen auf Transparenz, vertragliche Win-Win Situationen und eine langfristige Zusammenarbeit. Keine Bindung durch Verträge sondern Leistung!</p>
+
+            <div class="points-list">
+                <div class="point-item solution">
+                    <h3>Individuelle Betreuung</h3>
+                    <p>Wir nehmen uns Zeit für Ihre individuellen Ziele und entwickeln maßgeschneiderte Strategien, die exakt zu Ihrem Business passen.</p>
+                    <div class="box-emoji">🤝</div>
+                </div>
+                <div class="point-item solution">
+                    <h3>Transparente Echtzeit-Reportings</h3>
+                    <p>Sie sehen jederzeit, wohin Ihr Budget fließt und welche Ergebnisse wir erzielen – klar und verständlich.</p>
+                    <div class="box-emoji">📊</div>
+                </div>
+                <div class="point-item solution">
+                    <h3>Datengetriebene Optimierung</h3>
+                    <p>Mit 7 Jahren spezialisierte Google-Ads Erfahrung u.a. als Teamleiter und einer Budget-Verwaltung im mittleren 2 stelligen Millionenbereich optimieren wir Ihre Kampagnen langfristig für Top-Performance. Unsere Rezensionen finden Sie unten!</p>
+                    <div class="box-emoji">🚀</div>
+                </div>
+                <!-- New 4th box for Modern Working Methods and Innovation -->
+                <div class="point-item solution">
+                    <h3>Innovationsgeist & Modernste Arbeitsweisen</h3>
+                    <p>Wir setzen auf zukunftsweisende Methoden und bleiben am Puls der Zeit, um Ihre Google Ads Kampagnen mit innovativen Ansätzen stets zu optimieren.</p>
+                    <div class="box-emoji">💡</div>
+                </div>
+            </div>
+            
+            <a href="#prozess" class="cta-button" style="margin-top: 60px;">Erfahren Sie mehr über unseren Prozess</a>
+        </div>
+    </section>
+
+    <section class="section" id="prozess">
+        <div class="container">
+            <h2>Ihr Weg zum Google Ads Erfolg in 3 Schritten</h2>
+            <div class="how-it-works-steps">
+                <div class="step-item" data-step="1">
+                    <h3>Erstgespräch & Analyse</h3>
+                    <p>Wir lernen Ihr Business und Ihre Ziele kennen und führen eine erste Analyse Ihres Google Ads Potentials durch.</p>
+                </div>
+                <div class="step-item" data-step="2">
+                    <h3>Strategie & Implementierung</h3>
+                    <p>Wir entwickeln eine maßgeschneiderte Google Ads Strategie und setzen diese professionell in Ihrem Konto um.</p>
+                </div>
+                <div class="step-item" data-step="3">
+                    <h3>Kontinuierliche Optimierung & Reporting</h3>
+                    <p>Ihre Kampagnen werden laufend optimiert. Sie erhalten regelmäßige, transparente Echtzeit-Reportings und persönlichen Austausch.</p>
+                </div>
+            </div>
+            <a href="https://calendly.com/YOUR_CALENDLY_USERNAME/YOUR_EVENT_TYPE" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/YOUR_CALENDLY_USERNAME/YOUR_EVENT_TYPE'});return false;" class="cta-button" style="margin-top: 60px;">Jetzt kostenloses Erstgespräch vereinbaren</a>
+        </div>
+    </section>
+
+    <section class="section" id="preise">
+        <div class="container">
+            <h2>Transparente Preise</h2>
+            <div class="pricing-content">
+                <div class="price">
+                    Individuelles Angebot
+                </div>
+                <p>Jedes Unternehmen ist einzigartig. Wir erstellen ein maßgeschneidertes Angebot, das exakt auf Ihre Bedürfnisse und Ziele abgestimmt ist.</p>
+                <div class="guarantee">
+                    📈 Erfolgsorientiert: Ihr Wachstum ist unser Ziel.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <div class="container">
+            <h2>Häufig gestellte Fragen</h2>
+            <p>Hier finden Sie Antworten auf die wichtigsten Fragen zu unserer Google Ads Beratung.</p>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>Für welche Unternehmensgrößen ist Ihre Beratung geeignet?</h3>
+                    <p>Wir betreuen kleinere bis mittlere Unternehmen und sind auch erfahren in der Verwaltung von sehr großen, 7-stelligen monatlichen Budgets. Unser Fokus liegt auf Unternehmen, die höchste Qualität und vertrauensvolle Zusammenarbeit schätzen.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Wie unterscheiden Sie sich von anderen Agenturen?</h3>
+                    <p>Unser Alleinstellungsmerkmal liegt in der individuellen, hands-on Betreuung, der tiefen Datentriebenheit, 7 Jahren direkter Agenturerfahrung und dem Fokus auf eine langfristige, vertrauensvolle Geschäftsbeziehung mit transparenten Echtzeit-Reportings.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Was beinhaltet ein Konto-Audit?</h3>
+                    <p>Ein Konto-Audit ist eine umfassende Analyse Ihres bestehenden Google Ads Kontos. Wir identifizieren Schwachstellen, ungenutzte Potenziale und geben konkrete Handlungsempfehlungen zur Optimierung Ihrer Performance und Ihres ROIs.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Bieten Sie auch Mitarbeiterschulungen an?</h3>
+                    <p>Ja, im Rahmen unseres Angebots zur Mitarbeiterschulung (Outsource) bilden wir Ihre Mitarbeiter im Bereich Google Ads aus, damit Sie langfristig auch intern Expertise aufbauen können.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section (Removed for SF Consulting) -->
+    <!-- This section is hidden as it is not relevant for the new business by default -->
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 S.F Consulting. Alle Rechte vorbehalten.</p>
+            <p>Ihr Wachstum ist unser Ziel.</p>
+        </div>
+    </footer>
+
+    <!-- Calendly Widget JavaScript -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+
+    <script>
+        // JavaScript for FAQ Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item h3');
+
+            faqItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const parent = this.parentNode;
+                    parent.classList.toggle('active');
+                });
+            });
+
+            // JavaScript for Mobile Menu Toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mainNavUl = document.querySelector('.main-nav ul');
+
+            if (menuToggle && mainNavUl) {
+                menuToggle.addEventListener('click', function() {
+                    mainNavUl.classList.toggle('active');
+                    // Toggle the icon between bars and times
+                    const icon = this.querySelector('i');
+                    if (mainNavUl.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                        icon.style.color = 'var(--accent-dark-blue)'; // Icon changes to dark blue when open
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                        icon.style.color = 'var(--accent-main-blue)';
+                    }
+                });
+
+                // Close menu when a navigation link is clicked (for smooth scrolling)
+                mainNavUl.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        mainNavUl.classList.remove('active');
+                        // Reset icon when menu is closed by clicking a link
+                        const icon = menuToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                        icon.style.color = 'var(--accent-main-blue)';
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
